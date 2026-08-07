@@ -34,7 +34,7 @@ export default function Hero() {
             transition={{ duration: 0.7, ease: "easeOut" }}
             className="uppercase tracking-[8px] text-rose-500 font-semibold"
           >
-            Since 1999
+            Since 2000
           </motion.p>
 
           <motion.h1
