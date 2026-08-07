@@ -79,14 +79,20 @@ export default function Services() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
                 whileHover={{
-                  y: -10,
-                  scale: 1.03,
+                  y: -12,
+                  scale: 1.04,
+                  boxShadow: "0 25px 50px rgba(244,63,94,0.2)",
+                  transition: { type: "spring", stiffness: 300, damping: 18 },
                 }}
                 className="bg-white rounded-3xl shadow-xl p-8 border border-rose-100"
               >
-                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 flex items-center justify-center text-white">
+                <motion.div
+                  whileHover={{ rotate: 12, scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 12 }}
+                  className="w-16 h-16 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 flex items-center justify-center text-white"
+                >
                   <Icon size={30} />
-                </div>
+                </motion.div>
 
                 <h3 className="text-2xl font-bold mt-6">
                   {service.title}
