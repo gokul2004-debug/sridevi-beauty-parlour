@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
         {/* Left Side */}
-        <div>
+        <div className="text-center lg:text-left">
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -41,7 +41,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .2 }}
-            className="text-6xl md:text-7xl font-black leading-tight mt-6 text-gray-900"
+            className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight mt-6 text-gray-900"
           >
             Beauty
             <span className="block text-rose-500">
@@ -53,7 +53,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: .5 }}
-            className="mt-8 text-lg text-gray-600 leading-9 max-w-xl"
+            className="mt-8 text-lg text-gray-600 leading-9 max-w-xl mx-auto lg:mx-0"
           >
             Discover luxury beauty care with over 25 years of experience.
             Bridal makeup, skincare, hair styling and complete beauty
@@ -64,7 +64,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: .8 }}
-            className="flex flex-wrap gap-5 mt-10"
+            className="flex flex-wrap gap-5 mt-10 justify-center lg:justify-start"
           >
             <a
               href="#services"
@@ -91,7 +91,7 @@ export default function Hero() {
           transition={{ delay: .4 }}
           className="flex justify-center"
         >
-          <div className="w-[500px] h-[500px] rounded-[40px] bg-white shadow-2xl border border-rose-100 flex flex-col items-center justify-center">
+          <div className="w-full max-w-[500px] aspect-square rounded-[40px] bg-white shadow-2xl border border-rose-100 flex flex-col items-center justify-center p-6">
 
             {/* BIG LOGO */}
             <Image
@@ -99,34 +99,34 @@ export default function Hero() {
               alt="Sri Devi Beauty Parlour"
               width={380}
               height={380}
-              className="object-contain"
+              className="object-contain w-[55%] h-auto"
               priority
             />
 
-            <h2 className="mt-6 text-4xl font-bold text-gray-900">
+            <h2 className="mt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
               Sri Devi
             </h2>
 
-            <p className="tracking-[6px] text-gray-500 mt-2">
+            <p className="tracking-[4px] sm:tracking-[6px] text-gray-500 mt-2 text-sm sm:text-base text-center">
               BEAUTY PARLOUR
             </p>
 
-            <div className="mt-8 flex gap-12">
+            <div className="mt-8 flex gap-6 sm:gap-12">
 
               <div className="text-center">
-                <h3 className="text-4xl font-bold text-rose-500">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-rose-500">
                   25+
                 </h3>
-                <p className="text-gray-500">
+                <p className="text-gray-500 text-sm sm:text-base">
                   Years
                 </p>
               </div>
 
               <div className="text-center">
-                <h3 className="text-4xl font-bold text-rose-500">
+                <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-rose-500">
                   1000+
                 </h3>
-                <p className="text-gray-500">
+                <p className="text-gray-500 text-sm sm:text-base">
                   Clients
                 </p>
               </div>
