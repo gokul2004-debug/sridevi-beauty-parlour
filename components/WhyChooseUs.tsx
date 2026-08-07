@@ -38,7 +38,6 @@ export default function WhyChooseUs() {
       className="py-28 bg-gradient-to-b from-white via-rose-50 to-white"
     >
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="text-center mb-20">
           <p className="uppercase tracking-[8px] text-rose-500 font-semibold">
             Why Choose Us
@@ -58,13 +57,12 @@ export default function WhyChooseUs() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
           {reasons.map((item, index) => {
             const Icon = item.icon;
 
             return (
               <motion.div
-                key={index}
+                key={item.title}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -95,9 +93,7 @@ export default function WhyChooseUs() {
               </motion.div>
             );
           })}
-
         </div>
-
       </div>
     </section>
   );
