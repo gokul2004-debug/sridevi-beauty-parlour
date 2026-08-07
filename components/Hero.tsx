@@ -66,19 +66,25 @@ export default function Hero() {
             transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
             className="flex flex-wrap gap-5 mt-10 justify-center lg:justify-start"
           >
-            <a
+            <motion.a
               href="#services"
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold shadow-xl hover:scale-105 transition"
+              whileHover={{ scale: 1.06, boxShadow: "0 20px 40px rgba(244,63,94,0.45)" }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold shadow-xl"
             >
               Explore Services
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
               href="#contact"
-              className="px-8 py-4 rounded-full border-2 border-rose-500 text-rose-500 font-semibold hover:bg-rose-500 hover:text-white transition"
+              whileHover={{ scale: 1.06, backgroundColor: "#f43f5e", color: "#fff" }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: "spring", stiffness: 300, damping: 15 }}
+              className="px-8 py-4 rounded-full border-2 border-rose-500 text-rose-500 font-semibold"
             >
               Contact Us
-            </a>
+            </motion.a>
 
           </motion.div>
 
@@ -91,27 +97,40 @@ export default function Hero() {
           transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
           className="flex justify-center"
         >
-          <div className="w-full max-w-[500px] aspect-square rounded-[40px] bg-white shadow-2xl border border-rose-100 flex flex-col items-center justify-center p-6">
+          <div className="relative w-full max-w-[560px] aspect-square rounded-[40px] bg-white shadow-2xl border border-rose-100 flex flex-col items-center justify-center p-6 overflow-hidden">
 
-            {/* BIG LOGO */}
-            <Image
-              src="/logo.png"
-              alt="Sri Devi Beauty Parlour"
-              width={380}
-              height={380}
-              className="object-contain w-[55%] h-auto"
-              priority
+            {/* Glow ring pulse behind logo */}
+            <motion.div
+              animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.7, 0.4] }}
+              transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
+              className="absolute w-56 h-56 rounded-full bg-gradient-to-br from-rose-300 to-pink-300 blur-3xl"
             />
 
-            <h2 className="mt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            {/* BIG LOGO */}
+            <motion.div
+              whileHover={{ scale: 1.06, rotate: 2 }}
+              transition={{ type: "spring", stiffness: 250, damping: 15 }}
+              className="relative z-10"
+            >
+              <Image
+                src="/logo.png"
+                alt="Sri Devi Beauty Parlour"
+                width={380}
+                height={380}
+                className="object-contain w-[72%] h-auto mx-auto drop-shadow-xl"
+                priority
+              />
+            </motion.div>
+
+            <h2 className="relative z-10 mt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
               Sri Devi
             </h2>
 
-            <p className="tracking-[4px] sm:tracking-[6px] text-gray-500 mt-2 text-sm sm:text-base text-center">
+            <p className="relative z-10 tracking-[4px] sm:tracking-[6px] text-gray-500 mt-2 text-sm sm:text-base text-center">
               BEAUTY PARLOUR
             </p>
 
-            <div className="mt-8 flex gap-6 sm:gap-12">
+            <div className="relative z-10 mt-8 flex gap-6 sm:gap-12">
 
               <div className="text-center">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-rose-500">
