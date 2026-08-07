@@ -70,14 +70,20 @@ export default function WhyChooseUs() {
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.6, ease: "easeOut" }}
                 whileHover={{
-                  y: -10,
-                  scale: 1.03,
+                  y: -12,
+                  scale: 1.04,
+                  boxShadow: "0 25px 50px rgba(244,63,94,0.2)",
+                  transition: { type: "spring", stiffness: 300, damping: 18 },
                 }}
-                className="bg-white rounded-3xl shadow-xl border border-rose-100 p-8 text-center hover:shadow-2xl transition"
+                className="bg-white rounded-3xl shadow-xl border border-rose-100 p-8 text-center"
               >
-                <div className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-rose-500 to-pink-500 flex items-center justify-center text-white shadow-lg">
+                <motion.div
+                  whileHover={{ rotate: 12, scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 12 }}
+                  className="w-20 h-20 mx-auto rounded-full bg-gradient-to-r from-rose-500 to-pink-500 flex items-center justify-center text-white shadow-lg"
+                >
                   <Icon size={38} />
-                </div>
+                </motion.div>
 
                 <h3 className="text-2xl font-bold mt-8">
                   {item.title}
