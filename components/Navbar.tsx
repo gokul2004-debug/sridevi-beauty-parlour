@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
+import { motion } from "framer-motion";
 import LanguageToggle from "./LanguageToggle";
 import Image from "next/image";
 
@@ -35,13 +36,18 @@ export default function Navbar() {
 
        <a href="#home" className="flex items-center gap-3">
 
-        <Image
-           src="/logo.png"
-           alt="Sri Devi Beauty Parlour"
-           width={60}
-           height={60}
-           className="rounded-full"
-        />
+        <motion.div
+          whileHover={{ scale: 1.1, rotate: 5 }}
+          transition={{ type: "spring", stiffness: 300, damping: 12 }}
+        >
+          <Image
+             src="/logo.png"
+             alt="Sri Devi Beauty Parlour"
+             width={72}
+             height={72}
+             className="rounded-full"
+          />
+        </motion.div>
 
         <div>
           <h1 className="text-3xl font-black text-rose-500">
@@ -59,7 +65,7 @@ export default function Navbar() {
 
           {links.map((item) => (
 
-            <a
+            
               key={item}
               href={`#${item.toLowerCase()}`}
               className="font-medium hover:text-rose-500 transition"
@@ -90,7 +96,7 @@ export default function Navbar() {
 
           {links.map((item)=>(
 
-            <a
+            
               key={item}
               href={`#${item.toLowerCase()}`}
               className="block px-6 py-4 border-b"
