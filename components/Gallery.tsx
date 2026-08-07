@@ -6,27 +6,33 @@ import { motion } from "framer-motion";
 const gallery = [
   {
     title: "Bridal Makeup",
-    image: "https://picsum.photos/seed/bridal-makeup-glow/800/1000",
+    image:
+      "https://images.unsplash.com/photo-1588842867976-fd084ca2c87b?q=80&w=800&h=1000&fit=crop&auto=format",
   },
   {
     title: "Hair Styling",
-    image: "https://picsum.photos/seed/hair-styling-salon/800/1000",
+    image:
+      "https://images.unsplash.com/photo-1746723375184-5f537d2e6f31?q=80&w=800&h=1000&fit=crop&auto=format",
   },
   {
     title: "Skin Care",
-    image: "https://picsum.photos/seed/skin-care-glow/800/1000",
+    image:
+      "https://images.unsplash.com/photo-1578747763484-51b21a33e4fa?q=80&w=800&h=1000&fit=crop&auto=format",
   },
   {
     title: "Facial",
-    image: "https://picsum.photos/seed/facial-spa-glow/800/1000",
+    image:
+      "https://images.unsplash.com/photo-1552693673-1bf958298935?q=80&w=800&h=1000&fit=crop&auto=format",
   },
   {
     title: "Mehendi",
-    image: "https://picsum.photos/seed/mehendi-henna-art/800/1000",
+    image:
+      "https://images.unsplash.com/photo-1563962750292-d3401f66d46b?q=80&w=800&h=1000&fit=crop&auto=format",
   },
   {
     title: "Party Makeup",
-    image: "https://picsum.photos/seed/party-makeup-look/800/1000",
+    image:
+      "https://images.unsplash.com/photo-1512053517780-b14891c7d582?q=80&w=800&h=1000&fit=crop&auto=format",
   },
 ];
 
