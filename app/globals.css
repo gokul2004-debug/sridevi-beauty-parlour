@@ -1,0 +1,217 @@
+@import "tailwindcss";
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  padding:0;
+  background:linear-gradient(180deg,#fff,#fff7f8);
+  color:#222;
+  overflow-x:hidden;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+::selection{
+  background:#ec4899;
+  color:white;
+}
+
+section{
+  position:relative;
+}
+
+h1,h2,h3,h4{
+  font-weight:700;
+}
+
+button,
+a{
+  transition:.35s ease;
+}
+
+button:hover,
+a:hover{
+  transform:translateY(-2px);
+}
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#fff5f7;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#f43f5e;
+  border-radius:20px;
+}
+
+.glass{
+  background:rgba(255,255,255,.65);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,.3);
+}
+
+.gradientText{
+  background:linear-gradient(90deg,#e11d48,#fb7185);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+.card{
+  border-radius:30px;
+  background:white;
+  box-shadow:
+  0 10px 40px rgba(0,0,0,.08);
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  transition:.4s;
+}
+
+.heroGlow{
+  position:absolute;
+  width:600px;
+  height:600px;
+  border-radius:50%;
+  filter:blur(130px);
+  opacity:.25;
+  background:#fb7185;
+}
+
+.fadeUp{
+  animation:fadeUp 1s ease;
+}
+
+@keyframes fadeUp{
+
+from{
+opacity:0;
+transform:translateY(60px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.float{
+
+animation:float 5s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+
+.shine{
+position:relative;
+overflow:hidden;
+}
+
+.shine::after{
+
+content:"";
+
+position:absolute;
+
+top:-150%;
+
+left:-50%;
+
+width:50%;
+
+height:400%;
+
+transform:rotate(25deg);
+
+background:rgba(255,255,255,.4);
+
+transition:.8s;
+
+}
+
+.shine:hover::after{
+
+left:140%;
+
+}
+
+.shadowLuxury{
+
+box-shadow:
+
+0 30px 60px rgba(236,72,153,.15);
+
+}
+:root{
+  --font-heading:"Playfair Display",serif;
+  --font-body:"Poppins",sans-serif;
+}
+
+body{
+  font-family:var(--font-body);
+}
+
+h1,h2,h3,h4,h5{
+  font-family:var(--font-heading);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    #fffdfd 0%,
+    #fff6f8 35%,
+    #fff0f4 70%,
+    #ffffff 100%
+  );
+
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* Selection Color */
+::selection {
+  background: #f43f5e;
+  color: white;
+}
+
+/* Beautiful Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff5f7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#f43f5e, #ec4899);
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e11d48;
+}
