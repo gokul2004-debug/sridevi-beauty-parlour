@@ -68,7 +68,11 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
-              whileHover={{ y: -10 }}
+              whileHover={{
+                y: -14,
+                scale: 1.03,
+                transition: { type: "spring", stiffness: 260, damping: 18 },
+              }}
               className="relative h-[420px] overflow-hidden rounded-3xl shadow-2xl group"
             >
 
@@ -76,12 +80,15 @@ export default function Gallery() {
                 src={item.image}
                 alt={item.title}
                 fill
-                className="object-cover transition duration-700 group-hover:scale-110"
+                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.15]"
               />
+
+              {/* Shine sweep on hover */}
+              <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out bg-gradient-to-r from-transparent via-white/25 to-transparent pointer-events-none" />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-              <div className="absolute bottom-0 left-0 p-8">
+              <div className="absolute bottom-0 left-0 p-8 transition-transform duration-500 group-hover:-translate-y-2">
 
                 <h3 className="text-3xl font-bold text-white">
                   {item.title}
