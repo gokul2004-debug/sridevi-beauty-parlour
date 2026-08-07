@@ -31,7 +31,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: .8 }}
+            transition={{ duration: 0.7, ease: "easeOut" }}
             className="uppercase tracking-[8px] text-rose-500 font-semibold"
           >
             Since 1999
@@ -40,7 +40,7 @@ export default function Hero() {
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: .2 }}
+            transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
             className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight mt-6 text-gray-900"
           >
             Beauty
@@ -52,7 +52,7 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: .5 }}
+            transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" }}
             className="mt-8 text-lg text-gray-600 leading-9 max-w-xl mx-auto lg:mx-0"
           >
             Discover luxury beauty care with over 25 years of experience.
@@ -63,7 +63,7 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: .8 }}
+            transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
             className="flex flex-wrap gap-5 mt-10 justify-center lg:justify-start"
           >
             <a
@@ -88,7 +88,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, x: 80 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: .4 }}
+          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
           className="flex justify-center"
         >
           <div className="w-full max-w-[500px] aspect-square rounded-[40px] bg-white shadow-2xl border border-rose-100 flex flex-col items-center justify-center p-6">

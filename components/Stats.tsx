@@ -43,7 +43,7 @@ export default function Stats() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.15 }}
+                transition={{ delay: index * 0.15, duration: 0.6, ease: "easeOut" }}
                 whileHover={{ scale: 1.05 }}
                 className="bg-white/10 backdrop-blur-xl rounded-3xl p-10 text-center border border-white/20"
               >

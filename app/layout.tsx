@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sri Devi Beauty Parlour",
     description: "Luxury Bridal Makeup & Beauty Services",
-    images: ["/images/hero.jpg"],
+    images: ["https://picsum.photos/seed/beauty-parlour-og/1200/630"],
   },
 };
 

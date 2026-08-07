@@ -7,7 +7,7 @@ export default function Loader() {
     <motion.div
       initial={{ opacity: 1 }}
       animate={{ opacity: 0 }}
-      transition={{ delay: 2, duration: 1 }}
+      transition={{ delay: 0.4, duration: 0.6, ease: "easeInOut" }}
       className="fixed inset-0 z-[9999] flex items-center justify-center bg-gradient-to-br from-rose-100 via-white to-pink-100 pointer-events-none"
     >
       <div className="text-center">

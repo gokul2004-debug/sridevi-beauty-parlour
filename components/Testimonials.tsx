@@ -59,7 +59,7 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
+              transition={{ delay: index * 0.15, duration: 0.6, ease: "easeOut" }}
               whileHover={{
                 y: -10,
                 scale: 1.03,

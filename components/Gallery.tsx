@@ -6,27 +6,27 @@ import { motion } from "framer-motion";
 const gallery = [
   {
     title: "Bridal Makeup",
-    image: "/images/bridal.jpg",
+    image: "https://picsum.photos/seed/bridal-makeup-glow/800/1000",
   },
   {
     title: "Hair Styling",
-    image: "/images/hair.jpg",
+    image: "https://picsum.photos/seed/hair-styling-salon/800/1000",
   },
   {
     title: "Skin Care",
-    image: "/images/skincare.jpg",
+    image: "https://picsum.photos/seed/skin-care-glow/800/1000",
   },
   {
     title: "Facial",
-    image: "/images/facial.jpg",
+    image: "https://picsum.photos/seed/facial-spa-glow/800/1000",
   },
   {
     title: "Mehendi",
-    image: "/images/mehendi.jpg",
+    image: "https://picsum.photos/seed/mehendi-henna-art/800/1000",
   },
   {
     title: "Party Makeup",
-    image: "/images/party.jpg",
+    image: "https://picsum.photos/seed/party-makeup-look/800/1000",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function Gallery() {
               initial={{ opacity: 0, y: 60 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
               whileHover={{ y: -10 }}
               className="relative h-[420px] overflow-hidden rounded-3xl shadow-2xl group"
             >
