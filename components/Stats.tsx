@@ -44,12 +44,20 @@ export default function Stats() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: index * 0.15, duration: 0.6, ease: "easeOut" }}
-                whileHover={{ scale: 1.05 }}
+                whileHover={{
+                  scale: 1.06,
+                  y: -8,
+                  transition: { type: "spring", stiffness: 300, damping: 15 },
+                }}
                 className="bg-white/10 backdrop-blur-xl rounded-3xl p-10 text-center border border-white/20"
               >
-                <div className="w-20 h-20 mx-auto rounded-full bg-white flex items-center justify-center text-rose-500 shadow-lg">
+                <motion.div
+                  whileHover={{ rotate: -10, scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 300, damping: 12 }}
+                  className="w-20 h-20 mx-auto rounded-full bg-white flex items-center justify-center text-rose-500 shadow-lg"
+                >
                   <Icon size={38} />
-                </div>
+                </motion.div>
 
                 <h3 className="text-5xl font-black text-white mt-8">
                   {item.number}
