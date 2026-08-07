@@ -29,17 +29,14 @@ const stats = [
 export default function Stats() {
   return (
     <section className="py-24 bg-gradient-to-r from-rose-500 via-pink-500 to-rose-600">
-
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-
           {stats.map((item, index) => {
             const Icon = item.icon;
 
             return (
               <motion.div
-                key={index}
+                key={item.title}
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -66,15 +63,11 @@ export default function Stats() {
                 <p className="text-white/90 mt-3 text-lg">
                   {item.title}
                 </p>
-
               </motion.div>
             );
           })}
-
         </div>
-
       </div>
-
     </section>
   );
 }
