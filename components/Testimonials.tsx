@@ -25,18 +25,18 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-28 bg-gradient-to-b from-white via-rose-50 to-white"
+      className="py-16 sm:py-20 md:py-28 bg-gradient-to-b from-white via-rose-50 to-white"
     >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
         <div className="text-center mb-20">
 
-          <p className="uppercase tracking-[8px] text-rose-500 font-semibold">
+          <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
             Testimonials
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold mt-5">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-5">
             What Our
             <span className="block text-rose-500">
               Clients Say
@@ -59,7 +59,7 @@ export default function Testimonials() {
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.6, ease: "easeOut" }}
+              transition={{ delay: index * 0.2 }}
               whileHover={{
                 y: -10,
                 scale: 1.03,

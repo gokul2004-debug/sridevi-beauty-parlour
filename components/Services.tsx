@@ -47,16 +47,16 @@ export default function Services() {
   return (
     <section
       id="services"
-      className="py-28 bg-gradient-to-b from-rose-50 to-white"
+      className="py-16 sm:py-20 md:py-28 bg-gradient-to-b from-rose-50 to-white"
     >
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="text-center mb-16">
-          <p className="uppercase tracking-[8px] text-rose-500 font-semibold">
+          <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
             Our Services
           </p>
 
-          <h2 className="text-5xl font-bold mt-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4">
             Beauty Services
           </h2>
 
@@ -77,22 +77,16 @@ export default function Services() {
                 initial={{ opacity: 0, y: 40 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: index * 0.1, duration: 0.6, ease: "easeOut" }}
+                transition={{ delay: index * 0.1 }}
                 whileHover={{
-                  y: -12,
-                  scale: 1.04,
-                  boxShadow: "0 25px 50px rgba(244,63,94,0.2)",
-                  transition: { type: "spring", stiffness: 300, damping: 18 },
+                  y: -10,
+                  scale: 1.03,
                 }}
                 className="bg-white rounded-3xl shadow-xl p-8 border border-rose-100"
               >
-                <motion.div
-                  whileHover={{ rotate: 12, scale: 1.1 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 12 }}
-                  className="w-16 h-16 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 flex items-center justify-center text-white"
-                >
+                <div className="w-16 h-16 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 flex items-center justify-center text-white">
                   <Icon size={30} />
-                </motion.div>
+                </div>
 
                 <h3 className="text-2xl font-bold mt-6">
                   {service.title}

@@ -22,7 +22,7 @@ export default function BridalShowcase() {
   return (
     <section
       id="bridal"
-      className="relative py-28 bg-gradient-to-br from-rose-100 via-pink-50 to-white overflow-hidden"
+      className="relative py-16 sm:py-20 md:py-28 bg-gradient-to-br from-rose-100 via-pink-50 to-white overflow-hidden"
     >
       {/* Background Glow */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"></div>
@@ -37,11 +37,11 @@ export default function BridalShowcase() {
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <p className="uppercase tracking-[8px] text-rose-500 font-semibold">
+          <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
             Bridal Special
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold mt-5 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-5 leading-tight">
             Make Your
             <span className="block text-rose-500">
               Dream Day Beautiful

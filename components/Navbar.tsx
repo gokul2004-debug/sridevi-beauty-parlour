@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { motion } from "framer-motion";
 import LanguageToggle from "./LanguageToggle";
 import Image from "next/image";
 
@@ -32,34 +31,34 @@ export default function Navbar() {
           : "bg-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
 
-        <a href="#home" className="flex items-center gap-3">
-          <motion.div
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ type: "spring", stiffness: 300, damping: 12 }}
-          >
-            <Image
-              src="/logo.png"
-              alt="Sri Devi Beauty Parlour"
-              width={72}
-              height={72}
-              className="rounded-full"
-            />
-          </motion.div>
+       <a href="#home" className="flex items-center gap-3">
 
-          <div>
-            <h1 className="text-3xl font-black text-rose-500">
+        <Image
+           src="/logo.png"
+           alt="Sri Devi Beauty Parlour"
+           width={60}
+           height={60}
+           className="rounded-full w-10 h-10 sm:w-12 sm:h-12 md:w-[60px] md:h-[60px]"
+        />
+
+        <div>
+          <h1 className="text-lg sm:text-xl md:text-3xl font-black text-rose-500">
               Sri Devi
-            </h1>
-            <p className="text-xs tracking-[6px] text-gray-500">
-              BEAUTY PARLOUR
-            </p>
-          </div>
-        </a>
+          </h1>
+
+          <p className="text-[9px] sm:text-[10px] md:text-xs tracking-[2px] sm:tracking-[4px] md:tracking-[6px] text-gray-500">
+             BEAUTY PARLOUR
+          </p>
+        </div>
+
+       </a>
 
         <nav className="hidden md:flex gap-8">
+
           {links.map((item) => (
+
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -67,12 +66,14 @@ export default function Navbar() {
             >
               {item}
             </a>
+
           ))}
+
         </nav>
 
-        <div className="hidden md:block">
-          <LanguageToggle />
-        </div>
+      <div className="hidden md:block">
+        <LanguageToggle />
+      </div>
 
         <button
           onClick={() => setOpen(!open)}
@@ -84,8 +85,11 @@ export default function Navbar() {
       </div>
 
       {open && (
+
         <div className="md:hidden bg-white shadow-xl">
-          {links.map((item) => (
+
+          {links.map((item)=>(
+
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
@@ -93,8 +97,11 @@ export default function Navbar() {
             >
               {item}
             </a>
+
           ))}
+
         </div>
+
       )}
 
     </header>

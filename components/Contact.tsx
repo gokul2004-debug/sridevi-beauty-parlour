@@ -8,18 +8,18 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="py-28 bg-gradient-to-b from-rose-50 via-white to-rose-100"
+      className="py-16 sm:py-20 md:py-28 bg-gradient-to-b from-rose-50 via-white to-rose-100"
     >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
         <div className="text-center mb-20">
 
-          <p className="uppercase tracking-[8px] text-rose-500 font-semibold">
+          <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
             Contact Us
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-bold mt-5">
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-5">
             We'd Love
             <span className="block text-rose-500">
               To Welcome You

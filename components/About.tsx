@@ -7,7 +7,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative py-28 overflow-hidden bg-gradient-to-b from-white via-rose-50 to-white"
+      className="relative py-16 sm:py-20 md:py-28 overflow-hidden bg-gradient-to-b from-white via-rose-50 to-white"
     >
       {/* Background Glow */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-rose-200/20 rounded-full blur-3xl"></div>
@@ -24,11 +24,11 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
           >
-            <p className="uppercase tracking-[8px] text-rose-500 font-semibold">
+            <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
               About Us
             </p>
 
-            <h2 className="text-5xl md:text-6xl font-bold mt-5 leading-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-5 leading-tight">
               25+ Years of
               <span className="block text-rose-500">
                 Beauty Excellence

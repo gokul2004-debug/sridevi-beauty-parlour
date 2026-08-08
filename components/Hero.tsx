@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center bg-gradient-to-br from-rose-50 via-pink-50 to-white overflow-hidden"
+      className="relative min-h-screen flex items-center bg-gradient-to-br from-rose-50 via-pink-50 to-white overflow-hidden pt-28 pb-16 lg:pt-20 lg:pb-0"
     >
       {/* Background Glow */}
       <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-rose-300/20 rounded-full blur-[140px]" />
@@ -26,21 +26,21 @@ export default function Hero() {
       <div className="relative z-10 max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
 
         {/* Left Side */}
-        <div className="text-center lg:text-left">
+        <div>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="uppercase tracking-[8px] text-rose-500 font-semibold"
+            transition={{ duration: .8 }}
+            className="uppercase tracking-[4px] sm:tracking-[8px] text-rose-500 font-semibold"
           >
-            Since 2000
+            Since 1999
           </motion.p>
 
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2, duration: 0.7, ease: "easeOut" }}
+            transition={{ delay: .2 }}
             className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight mt-6 text-gray-900"
           >
             Beauty
@@ -52,8 +52,8 @@ export default function Hero() {
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.4, duration: 0.7, ease: "easeOut" }}
-            className="mt-8 text-lg text-gray-600 leading-9 max-w-xl mx-auto lg:mx-0"
+            transition={{ delay: .5 }}
+            className="mt-8 text-lg text-gray-600 leading-9 max-w-xl"
           >
             Discover luxury beauty care with over 25 years of experience.
             Bridal makeup, skincare, hair styling and complete beauty
@@ -63,28 +63,22 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.7, ease: "easeOut" }}
-            className="flex flex-wrap gap-5 mt-10 justify-center lg:justify-start"
+            transition={{ delay: .8 }}
+            className="flex flex-wrap gap-5 mt-10"
           >
-            <motion.a
+            <a
               href="#services"
-              whileHover={{ scale: 1.06, boxShadow: "0 20px 40px rgba(244,63,94,0.45)" }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ type: "spring", stiffness: 300, damping: 15 }}
-              className="px-8 py-4 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold shadow-xl"
+              className="px-8 py-4 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold shadow-xl hover:scale-105 transition"
             >
               Explore Services
-            </motion.a>
+            </a>
 
-            <motion.a
+            <a
               href="#contact"
-              whileHover={{ scale: 1.06, backgroundColor: "#f43f5e", color: "#fff" }}
-              whileTap={{ scale: 0.97 }}
-              transition={{ type: "spring", stiffness: 300, damping: 15 }}
-              className="px-8 py-4 rounded-full border-2 border-rose-500 text-rose-500 font-semibold"
+              className="px-8 py-4 rounded-full border-2 border-rose-500 text-rose-500 font-semibold hover:bg-rose-500 hover:text-white transition"
             >
               Contact Us
-            </motion.a>
+            </a>
 
           </motion.div>
 
@@ -94,43 +88,30 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, x: 80 }}
           animate={{ opacity: 1, x: 0 }}
-          transition={{ delay: 0.3, duration: 0.8, ease: "easeOut" }}
+          transition={{ delay: .4 }}
           className="flex justify-center"
         >
-          <div className="relative w-full max-w-[560px] aspect-square rounded-[40px] bg-white shadow-2xl border border-rose-100 flex flex-col items-center justify-center p-6 overflow-hidden">
-
-            {/* Glow ring pulse behind logo */}
-            <motion.div
-              animate={{ scale: [1, 1.15, 1], opacity: [0.4, 0.7, 0.4] }}
-              transition={{ repeat: Infinity, duration: 3.5, ease: "easeInOut" }}
-              className="absolute w-56 h-56 rounded-full bg-gradient-to-br from-rose-300 to-pink-300 blur-3xl"
-            />
+          <div className="w-full max-w-[320px] sm:max-w-[420px] md:max-w-[500px] aspect-square rounded-[40px] bg-white shadow-2xl border border-rose-100 flex flex-col items-center justify-center p-6">
 
             {/* BIG LOGO */}
-            <motion.div
-              whileHover={{ scale: 1.06, rotate: 2 }}
-              transition={{ type: "spring", stiffness: 250, damping: 15 }}
-              className="relative z-10"
-            >
-              <Image
-                src="/logo.png"
-                alt="Sri Devi Beauty Parlour"
-                width={380}
-                height={380}
-                className="object-contain w-[72%] h-auto mx-auto drop-shadow-xl"
-                priority
-              />
-            </motion.div>
+            <Image
+              src="/logo.png"
+              alt="Sri Devi Beauty Parlour"
+              width={380}
+              height={380}
+              className="object-contain w-32 sm:w-48 md:w-[220px] h-auto"
+              priority
+            />
 
-            <h2 className="relative z-10 mt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
+            <h2 className="mt-4 sm:mt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
               Sri Devi
             </h2>
 
-            <p className="relative z-10 tracking-[4px] sm:tracking-[6px] text-gray-500 mt-2 text-sm sm:text-base text-center">
+            <p className="tracking-[3px] sm:tracking-[6px] text-gray-500 mt-2 text-xs sm:text-base">
               BEAUTY PARLOUR
             </p>
 
-            <div className="relative z-10 mt-8 flex gap-6 sm:gap-12">
+            <div className="mt-5 sm:mt-8 flex gap-6 sm:gap-12">
 
               <div className="text-center">
                 <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-rose-500">
