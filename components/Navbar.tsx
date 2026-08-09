@@ -101,6 +101,10 @@ export default function Navbar() {
 
           ))}
 
+          <div className="px-6 py-4 flex justify-center">
+            <LanguageToggle />
+          </div>
+
         </div>
 
       )}
