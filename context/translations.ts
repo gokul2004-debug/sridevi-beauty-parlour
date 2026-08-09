@@ -5,7 +5,7 @@ export const translations = {
   navGallery: { en: "Gallery", ta: "கேலரி" },
   navContact: { en: "Contact", ta: "தொடர்பு" },
 
-  heroSince: { en: "Since 1999", ta: "1999 முதல்" },
+  heroSince: { en: "Since 2000", ta: "1999 முதல்" },
   heroTitle1: { en: "Beauty", ta: "அழகு" },
   heroTitle2: { en: "Redefined", ta: "புதிய அர்த்தம்" },
   heroDesc: {
