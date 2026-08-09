@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { LanguageProvider } from "@/context/LanguageContext";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://example.com"),
@@ -26,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sri Devi Beauty Parlour",
     description: "Luxury Bridal Makeup & Beauty Services",
-    images: ["https://images.unsplash.com/photo-1588842867976-fd084ca2c87b?q=80&w=1200&h=630&fit=crop&auto=format"],
+    images: ["/images/hero.jpg"],
   },
 };
 
@@ -37,7 +38,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }
