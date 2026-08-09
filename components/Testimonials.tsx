@@ -2,26 +2,17 @@
 
 import { motion } from "framer-motion";
 import { Quote, Star } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import type { TranslationKey } from "@/context/translations";
 
-const testimonials = [
-  {
-    name: "Happy Bride",
-    review:
-      "Amazing bridal makeup! I felt confident and beautiful throughout my wedding day. Thank you for making my day special.",
-  },
-  {
-    name: "Regular Customer",
-    review:
-      "Professional service, friendly staff and a relaxing atmosphere. My favourite beauty parlour for years.",
-  },
-  {
-    name: "Satisfied Client",
-    review:
-      "Excellent skincare and hair care services. Highly recommended for anyone looking for quality beauty treatments.",
-  },
+const testimonials: { nameKey: TranslationKey; reviewKey: TranslationKey }[] = [
+  { nameKey: "testi1Name", reviewKey: "testi1Review" },
+  { nameKey: "testi2Name", reviewKey: "testi2Review" },
+  { nameKey: "testi3Name", reviewKey: "testi3Review" },
 ];
 
 export default function Testimonials() {
+  const { t } = useLanguage();
   return (
     <section
       id="testimonials"
@@ -33,19 +24,18 @@ export default function Testimonials() {
         <div className="text-center mb-20">
 
           <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
-            Testimonials
+            {t("testiEyebrow")}
           </p>
 
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-5">
-            What Our
+            {t("testiTitle1")}
             <span className="block text-rose-500">
-              Clients Say
+              {t("testiTitle2")}
             </span>
           </h2>
 
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto leading-8">
-            The trust and satisfaction of our clients inspire us to
-            deliver exceptional beauty services every day.
+            {t("testiDesc")}
           </p>
 
         </div>
@@ -83,16 +73,16 @@ export default function Testimonials() {
               </div>
 
               <p className="text-gray-600 leading-8">
-                "{item.review}"
+                "{t(item.reviewKey)}"
               </p>
 
               <div className="mt-8 border-t pt-6">
                 <h3 className="text-xl font-bold">
-                  {item.name}
+                  {t(item.nameKey)}
                 </h3>
 
                 <p className="text-rose-500">
-                  Verified Customer
+                  {t("testiVerified")}
                 </p>
               </div>
 

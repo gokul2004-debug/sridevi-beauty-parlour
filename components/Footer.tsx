@@ -1,7 +1,11 @@
+"use client";
+
 import { MapPin, Clock } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Footer() {
+  const { t } = useLanguage();
   return (
     <footer className="bg-gradient-to-b from-[#1a1a1a] to-black text-white pt-20">
 
@@ -12,16 +16,15 @@ export default function Footer() {
         <div>
 
           <h2 className="text-4xl font-black text-rose-400">
-            Sri Devi
+            {t("heroBrand")}
           </h2>
 
           <p className="tracking-[6px] text-gray-400 mt-2">
-            BEAUTY PARLOUR
+            {t("heroBrandSub")}
           </p>
 
           <p className="mt-6 text-gray-400 leading-8">
-            Bringing beauty, confidence and elegance to every client
-            with over 25 years of trusted experience.
+            {t("footerTagline")}
           </p>
 
         </div>
@@ -31,7 +34,7 @@ export default function Footer() {
         <div>
 
           <h3 className="text-2xl font-bold mb-8">
-            Visit Us
+            {t("footerVisitUs")}
           </h3>
 
           <div className="space-y-6">
@@ -45,15 +48,16 @@ export default function Footer() {
               <div>
 
                 <h4 className="font-semibold">
-                  Address
+                  {t("footerAddressLabel")}
                 </h4>
 
                 <p className="text-gray-400">
-                  Vanapuram
-                  <br />
-                  Tiruvannamalai
-                  <br />
-                  Tamil Nadu
+                  {t("contactAddress").split("\n").map((line, i, arr) => (
+                    <span key={i}>
+                      {line}
+                      {i < arr.length - 1 && <br />}
+                    </span>
+                  ))}
                 </p>
 
               </div>
@@ -69,13 +73,16 @@ export default function Footer() {
               <div>
 
                 <h4 className="font-semibold">
-                  Working Hours
+                  {t("footerHoursLabel")}
                 </h4>
 
                 <p className="text-gray-400">
-                  Every Day
-                  <br />
-                  8:00 AM – 9:00 PM
+                  {t("contactHours").split("\n").map((line, i, arr) => (
+                    <span key={i}>
+                      {line}
+                      {i < arr.length - 1 && <br />}
+                    </span>
+                  ))}
                 </p>
 
               </div>
@@ -91,12 +98,11 @@ export default function Footer() {
         <div>
 
           <h3 className="text-2xl font-bold mb-8">
-            Follow Us
+            {t("footerFollowUs")}
           </h3>
 
           <p className="text-gray-400 leading-8 mb-8">
-            Follow our Instagram to see bridal makeovers,
-            beauty transformations and salon updates.
+            {t("footerFollowDesc")}
           </p>
 
           <a
@@ -120,11 +126,11 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
 
           <p className="text-gray-500 text-center">
-            © 2026 Sri Devi Beauty Parlour. All Rights Reserved.
+            {t("footerCopyright")}
           </p>
 
           <p className="text-gray-600 text-sm">
-            Crafted with ❤️ for Sri Devi Beauty Parlour
+            {t("footerCredit")}
           </p>
 
         </div>

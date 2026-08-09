@@ -4,10 +4,12 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import LanguageToggle from "./LanguageToggle";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     const onScroll = () => setScroll(window.scrollY > 20);
@@ -16,12 +18,11 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    "Home",
-    "About",
-    "Services",
-    "Gallery",
-    "Contact",
-  ];
+    { key: "navHome", href: "home" },
+    { key: "navAbout", href: "about" },
+    { key: "navServices", href: "services" },
+    { key: "navContact", href: "contact" },
+  ] as const;
 
   return (
     <header
@@ -45,11 +46,11 @@ export default function Navbar() {
 
         <div>
           <h1 className="text-lg sm:text-xl md:text-3xl font-black text-rose-500">
-              Sri Devi
+              {t("heroBrand")}
           </h1>
 
           <p className="text-[9px] sm:text-[10px] md:text-xs tracking-[2px] sm:tracking-[4px] md:tracking-[6px] text-gray-500">
-             BEAUTY PARLOUR
+             {t("heroBrandSub")}
           </p>
         </div>
 
@@ -60,11 +61,11 @@ export default function Navbar() {
           {links.map((item) => (
 
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.key}
+              href={`#${item.href}`}
               className="font-medium hover:text-rose-500 transition"
             >
-              {item}
+              {t(item.key)}
             </a>
 
           ))}
@@ -91,11 +92,11 @@ export default function Navbar() {
           {links.map((item)=>(
 
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.key}
+              href={`#${item.href}`}
               className="block px-6 py-4 border-b"
             >
-              {item}
+              {t(item.key)}
             </a>
 
           ))}

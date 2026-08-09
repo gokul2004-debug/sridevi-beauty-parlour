@@ -2,8 +2,10 @@
 
 import { motion } from "framer-motion";
 import { Award, Heart, Sparkles } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function About() {
+  const { t } = useLanguage();
   return (
     <section
       id="about"
@@ -25,28 +27,22 @@ export default function About() {
             transition={{ duration: 0.8 }}
           >
             <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
-              About Us
+              {t("aboutEyebrow")}
             </p>
 
             <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-5 leading-tight">
-              25+ Years of
+              {t("aboutTitle1")}
               <span className="block text-rose-500">
-                Beauty Excellence
+                {t("aboutTitle2")}
               </span>
             </h2>
 
             <p className="mt-8 text-gray-600 leading-9 text-lg">
-              Sri Devi Beauty Parlour has proudly served women in
-              Vanapuram and nearby areas for over 25 years. We believe
-              every woman deserves to look and feel beautiful,
-              confident and elegant.
+              {t("aboutPara1")}
             </p>
 
             <p className="mt-6 text-gray-600 leading-9 text-lg">
-              From bridal makeup to skincare, hair styling,
-              facials, mehendi and complete beauty care,
-              we deliver every service with passion,
-              professionalism and personal attention.
+              {t("aboutPara2")}
             </p>
 
             {/* Stats */}
@@ -54,37 +50,37 @@ export default function About() {
 
               <div className="bg-white rounded-3xl shadow-lg p-6 text-center">
                 <h3 className="text-4xl font-bold text-rose-500">
-                  25+
+                  {t("aboutStat1Num")}
                 </h3>
                 <p className="text-gray-500 mt-2">
-                  Years Experience
+                  {t("aboutStat1Label")}
                 </p>
               </div>
 
               <div className="bg-white rounded-3xl shadow-lg p-6 text-center">
                 <h3 className="text-4xl font-bold text-rose-500">
-                  1000+
+                  {t("aboutStat2Num")}
                 </h3>
                 <p className="text-gray-500 mt-2">
-                  Happy Clients
+                  {t("aboutStat2Label")}
                 </p>
               </div>
 
               <div className="bg-white rounded-3xl shadow-lg p-6 text-center">
                 <h3 className="text-4xl font-bold text-rose-500">
-                  100%
+                  {t("aboutStat3Num")}
                 </h3>
                 <p className="text-gray-500 mt-2">
-                  Premium Care
+                  {t("aboutStat3Label")}
                 </p>
               </div>
 
               <div className="bg-white rounded-3xl shadow-lg p-6 text-center">
                 <h3 className="text-4xl font-bold text-rose-500">
-                  ★ 5.0
+                  {t("aboutStat4Num")}
                 </h3>
                 <p className="text-gray-500 mt-2">
-                  Customer Love
+                  {t("aboutStat4Label")}
                 </p>
               </div>
 
@@ -110,12 +106,11 @@ export default function About() {
 
               <div>
                 <h3 className="text-2xl font-bold">
-                  25+ Years Experience
+                  {t("aboutCard1Title")}
                 </h3>
 
                 <p className="text-gray-600 mt-3 leading-7">
-                  Trusted by generations of women for bridal makeup,
-                  beauty treatments and personalized salon care.
+                  {t("aboutCard1Desc")}
                 </p>
               </div>
 
@@ -130,12 +125,11 @@ export default function About() {
 
               <div>
                 <h3 className="text-2xl font-bold">
-                  Customer First
+                  {t("aboutCard2Title")}
                 </h3>
 
                 <p className="text-gray-600 mt-3 leading-7">
-                  Every client receives personal attention,
-                  professional care and a relaxing salon experience.
+                  {t("aboutCard2Desc")}
                 </p>
               </div>
 
@@ -150,12 +144,11 @@ export default function About() {
 
               <div>
                 <h3 className="text-2xl font-bold">
-                  Premium Products
+                  {t("aboutCard3Title")}
                 </h3>
 
                 <p className="text-gray-600 mt-3 leading-7">
-                  We use trusted beauty products and modern techniques
-                  to deliver safe, beautiful and long-lasting results.
+                  {t("aboutCard3Desc")}
                 </p>
               </div>
 

@@ -8,17 +8,20 @@ import {
   Heart,
   CheckCircle,
 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import type { TranslationKey } from "@/context/translations";
 
-const features = [
-  "HD Bridal Makeup",
-  "Airbrush Makeup",
-  "Reception Makeup",
-  "Hair Styling",
-  "Long-lasting Finish",
-  "Premium Products",
+const featureKeys: TranslationKey[] = [
+  "bridalFeature1",
+  "bridalFeature2",
+  "bridalFeature3",
+  "bridalFeature4",
+  "bridalFeature5",
+  "bridalFeature6",
 ];
 
 export default function BridalShowcase() {
+  const { t } = useLanguage();
   return (
     <section
       id="bridal"
@@ -38,31 +41,28 @@ export default function BridalShowcase() {
           transition={{ duration: 0.8 }}
         >
           <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
-            Bridal Special
+            {t("bridalEyebrow")}
           </p>
 
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-5 leading-tight">
-            Make Your
+            {t("bridalTitle1")}
             <span className="block text-rose-500">
-              Dream Day Beautiful
+              {t("bridalTitle2")}
             </span>
           </h2>
 
           <p className="mt-8 text-lg text-gray-600 leading-9">
-            Every bride deserves to shine with confidence.
-            We specialize in elegant bridal makeup,
-            hairstyle design and complete bridal beauty care
-            using premium products and modern techniques.
+            {t("bridalDesc")}
           </p>
 
           <div className="grid sm:grid-cols-2 gap-4 mt-10">
-            {features.map((item, index) => (
+            {featureKeys.map((key, index) => (
               <div
                 key={index}
                 className="flex items-center gap-3 bg-white rounded-2xl p-4 shadow-md"
               >
                 <CheckCircle className="text-rose-500" size={20} />
-                <span>{item}</span>
+                <span>{t(key)}</span>
               </div>
             ))}
           </div>
@@ -71,7 +71,7 @@ export default function BridalShowcase() {
             href="#contact"
             className="inline-block mt-10 px-8 py-4 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold shadow-xl hover:scale-105 transition"
           >
-            Book Consultation
+            {t("bridalBookBtn")}
           </a>
         </motion.div>
 
@@ -90,29 +90,28 @@ export default function BridalShowcase() {
             </div>
 
             <h3 className="text-3xl font-bold text-center mt-8">
-              Bridal Beauty
+              {t("bridalCardTitle")}
             </h3>
 
             <p className="text-center text-gray-500 mt-4 leading-8">
-              Elegant makeup and bridal styling tailored to
-              your personality, outfit and special occasion.
+              {t("bridalCardDesc")}
             </p>
 
             <div className="grid grid-cols-3 gap-5 mt-10">
 
               <div className="text-center">
                 <Sparkles className="mx-auto text-rose-500" size={32} />
-                <p className="text-sm mt-2">Glow</p>
+                <p className="text-sm mt-2">{t("bridalGlow")}</p>
               </div>
 
               <div className="text-center">
                 <Gem className="mx-auto text-rose-500" size={32} />
-                <p className="text-sm mt-2">Luxury</p>
+                <p className="text-sm mt-2">{t("bridalLuxury")}</p>
               </div>
 
               <div className="text-center">
                 <Heart className="mx-auto text-rose-500" size={32} />
-                <p className="text-sm mt-2">Care</p>
+                <p className="text-sm mt-2">{t("bridalCare")}</p>
               </div>
 
             </div>

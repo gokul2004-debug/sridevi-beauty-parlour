@@ -9,41 +9,20 @@ import {
   Flower2,
   Gem,
 } from "lucide-react";
+import { useLanguage, } from "@/context/LanguageContext";
+import type { TranslationKey } from "@/context/translations";
 
-const services = [
-  {
-    icon: Scissors,
-    title: "Hair Styling",
-    desc: "Professional haircuts, styling, straightening and smoothing.",
-  },
-  {
-    icon: Sparkles,
-    title: "Bridal Makeup",
-    desc: "Elegant bridal makeup for weddings and special occasions.",
-  },
-  {
-    icon: Flower2,
-    title: "Facials",
-    desc: "Glow-enhancing facial treatments for healthy radiant skin.",
-  },
-  {
-    icon: Brush,
-    title: "Mehendi",
-    desc: "Beautiful traditional and modern mehendi designs.",
-  },
-  {
-    icon: Heart,
-    title: "Hair Spa",
-    desc: "Deep nourishment for silky, smooth and healthy hair.",
-  },
-  {
-    icon: Gem,
-    title: "Skin Care",
-    desc: "Professional skincare treatments for every skin type.",
-  },
+const services: { icon: any; titleKey: TranslationKey; descKey: TranslationKey }[] = [
+  { icon: Scissors, titleKey: "service1Title", descKey: "service1Desc" },
+  { icon: Sparkles, titleKey: "service2Title", descKey: "service2Desc" },
+  { icon: Flower2, titleKey: "service3Title", descKey: "service3Desc" },
+  { icon: Brush, titleKey: "service4Title", descKey: "service4Desc" },
+  { icon: Heart, titleKey: "service5Title", descKey: "service5Desc" },
+  { icon: Gem, titleKey: "service6Title", descKey: "service6Desc" },
 ];
 
 export default function Services() {
+  const { t } = useLanguage();
   return (
     <section
       id="services"
@@ -53,16 +32,15 @@ export default function Services() {
 
         <div className="text-center mb-16">
           <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
-            Our Services
+            {t("servicesEyebrow")}
           </p>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4">
-            Beauty Services
+            {t("servicesTitle")}
           </h2>
 
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto">
-            Experience premium beauty care with trusted professionals and
-            high-quality products.
+            {t("servicesDesc")}
           </p>
         </div>
 
@@ -89,11 +67,11 @@ export default function Services() {
                 </div>
 
                 <h3 className="text-2xl font-bold mt-6">
-                  {service.title}
+                  {t(service.titleKey)}
                 </h3>
 
                 <p className="mt-4 text-gray-600 leading-8">
-                  {service.desc}
+                  {t(service.descKey)}
                 </p>
               </motion.div>
             );

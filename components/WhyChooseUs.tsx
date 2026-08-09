@@ -7,31 +7,18 @@ import {
   HeartHandshake,
   Gem,
 } from "lucide-react";
+import { useLanguage } from "@/context/LanguageContext";
+import type { TranslationKey } from "@/context/translations";
 
-const reasons = [
-  {
-    icon: ShieldCheck,
-    title: "25+ Years Experience",
-    desc: "Trusted beauty services with decades of expertise.",
-  },
-  {
-    icon: Sparkles,
-    title: "Premium Products",
-    desc: "We use high-quality beauty products for the best results.",
-  },
-  {
-    icon: HeartHandshake,
-    title: "Personal Care",
-    desc: "Every customer receives individual attention and care.",
-  },
-  {
-    icon: Gem,
-    title: "Affordable Luxury",
-    desc: "Premium beauty services at reasonable prices.",
-  },
+const reasons: { icon: any; titleKey: TranslationKey; descKey: TranslationKey }[] = [
+  { icon: ShieldCheck, titleKey: "why1Title", descKey: "why1Desc" },
+  { icon: Sparkles, titleKey: "why2Title", descKey: "why2Desc" },
+  { icon: HeartHandshake, titleKey: "why3Title", descKey: "why3Desc" },
+  { icon: Gem, titleKey: "why4Title", descKey: "why4Desc" },
 ];
 
 export default function WhyChooseUs() {
+  const { t } = useLanguage();
   return (
     <section
       id="why"
@@ -41,19 +28,18 @@ export default function WhyChooseUs() {
 
         <div className="text-center mb-20">
           <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
-            Why Choose Us
+            {t("whyEyebrow")}
           </p>
 
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-5">
-            Experience Beauty
+            {t("whyTitle1")}
             <span className="block text-rose-500">
-              Like Never Before
+              {t("whyTitle2")}
             </span>
           </h2>
 
           <p className="mt-6 text-gray-600 max-w-3xl mx-auto leading-8">
-            We combine experience, quality products and personalized
-            care to make every visit memorable.
+            {t("whyDesc")}
           </p>
         </div>
 
@@ -80,11 +66,11 @@ export default function WhyChooseUs() {
                 </div>
 
                 <h3 className="text-2xl font-bold mt-8">
-                  {item.title}
+                  {t(item.titleKey)}
                 </h3>
 
                 <p className="text-gray-600 mt-5 leading-8">
-                  {item.desc}
+                  {t(item.descKey)}
                 </p>
               </motion.div>
             );

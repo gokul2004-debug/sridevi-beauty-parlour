@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import { MapPin, Clock } from "lucide-react";
 import { FaInstagram } from "react-icons/fa";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Contact() {
+  const { t } = useLanguage();
   return (
     <section
       id="contact"
@@ -16,20 +18,18 @@ export default function Contact() {
         <div className="text-center mb-20">
 
           <p className="uppercase tracking-[3px] sm:tracking-[8px] text-rose-500 font-semibold text-sm sm:text-base">
-            Contact Us
+            {t("contactEyebrow")}
           </p>
 
           <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-5">
-            We'd Love
+            {t("contactTitle1")}
             <span className="block text-rose-500">
-              To Welcome You
+              {t("contactTitle2")}
             </span>
           </h2>
 
           <p className="mt-6 text-gray-600 max-w-2xl mx-auto leading-8">
-            Visit Sri Devi Beauty Parlour for premium beauty services.
-            Follow us on Instagram to see our latest bridal makeovers,
-            hairstyles and beauty updates.
+            {t("contactDesc")}
           </p>
 
         </div>
@@ -52,15 +52,16 @@ export default function Contact() {
 
               <div>
                 <h3 className="text-2xl font-bold">
-                  Address
+                  {t("contactAddressTitle")}
                 </h3>
 
                 <p className="text-gray-600 mt-3 leading-8">
-                  Vanapuram
-                  <br />
-                  Tiruvannamalai
-                  <br />
-                  Tamil Nadu
+                  {t("contactAddress").split("\n").map((line, i, arr) => (
+                    <span key={i}>
+                      {line}
+                      {i < arr.length - 1 && <br />}
+                    </span>
+                  ))}
                 </p>
               </div>
 
@@ -74,13 +75,16 @@ export default function Contact() {
 
               <div>
                 <h3 className="text-2xl font-bold">
-                  Working Hours
+                  {t("contactHoursTitle")}
                 </h3>
 
                 <p className="text-gray-600 mt-3 leading-8">
-                  Every Day
-                  <br />
-                  8:00 AM – 9:00 PM
+                  {t("contactHours").split("\n").map((line, i, arr) => (
+                    <span key={i}>
+                      {line}
+                      {i < arr.length - 1 && <br />}
+                    </span>
+                  ))}
                 </p>
               </div>
 
@@ -99,12 +103,11 @@ export default function Contact() {
             <FaInstagram size={70} />
 
             <h3 className="text-4xl font-bold mt-6">
-              Follow Us
+              {t("contactFollowTitle")}
             </h3>
 
             <p className="mt-6 leading-8 text-white/90">
-              Discover our latest bridal makeup, beauty tips,
-              hairstyles and salon updates on Instagram.
+              {t("contactFollowDesc")}
             </p>
 
             <a

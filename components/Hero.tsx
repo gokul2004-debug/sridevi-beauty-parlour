@@ -3,8 +3,10 @@
 import { motion } from "framer-motion";
 import { Sparkles } from "lucide-react";
 import Image from "next/image";
+import { useLanguage } from "@/context/LanguageContext";
 
 export default function Hero() {
+  const { t } = useLanguage();
   return (
     <section
       id="home"
@@ -34,7 +36,7 @@ export default function Hero() {
             transition={{ duration: .8 }}
             className="uppercase tracking-[4px] sm:tracking-[8px] text-rose-500 font-semibold"
           >
-            Since 2000
+            {t("heroSince")}
           </motion.p>
 
           <motion.h1
@@ -43,9 +45,9 @@ export default function Hero() {
             transition={{ delay: .2 }}
             className="text-4xl sm:text-5xl md:text-7xl font-black leading-tight mt-6 text-gray-900"
           >
-            Beauty
+            {t("heroTitle1")}
             <span className="block text-rose-500">
-              Redefined
+              {t("heroTitle2")}
             </span>
           </motion.h1>
 
@@ -55,9 +57,7 @@ export default function Hero() {
             transition={{ delay: .5 }}
             className="mt-8 text-lg text-gray-600 leading-9 max-w-xl"
           >
-            Discover luxury beauty care with over 25 years of experience.
-            Bridal makeup, skincare, hair styling and complete beauty
-            services designed to make every moment special.
+            {t("heroDesc")}
           </motion.p>
 
           <motion.div
@@ -70,14 +70,14 @@ export default function Hero() {
               href="#services"
               className="px-8 py-4 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-bold shadow-xl hover:scale-105 transition"
             >
-              Explore Services
+              {t("heroExplore")}
             </a>
 
             <a
               href="#contact"
               className="px-8 py-4 rounded-full border-2 border-rose-500 text-rose-500 font-semibold hover:bg-rose-500 hover:text-white transition"
             >
-              Contact Us
+              {t("heroContact")}
             </a>
 
           </motion.div>
@@ -104,11 +104,11 @@ export default function Hero() {
             />
 
             <h2 className="mt-4 sm:mt-6 text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900">
-              Sri Devi
+              {t("heroBrand")}
             </h2>
 
             <p className="tracking-[3px] sm:tracking-[6px] text-gray-500 mt-2 text-xs sm:text-base">
-              BEAUTY PARLOUR
+              {t("heroBrandSub")}
             </p>
 
             <div className="mt-5 sm:mt-8 flex gap-6 sm:gap-12">
@@ -118,7 +118,7 @@ export default function Hero() {
                   25+
                 </h3>
                 <p className="text-gray-500 text-sm sm:text-base">
-                  Years
+                  {t("heroYears")}
                 </p>
               </div>
 
@@ -127,7 +127,7 @@ export default function Hero() {
                   1000+
                 </h3>
                 <p className="text-gray-500 text-sm sm:text-base">
-                  Clients
+                  {t("heroClients")}
                 </p>
               </div>
 
